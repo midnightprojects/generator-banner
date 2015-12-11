@@ -29,10 +29,10 @@ var _s = require('underscore.string');
 
         // ---------------------------------------------------------------------------
         askFor: function () {
-            // var done = this.async();
+            var done = this.async();
 
             if (!this.options['skip-welcome-message']) {
-                this.log(yosay('Freakin Banners!!!'));
+                this.log(yosay('Freakin Banners - 1'));
             }
 
             var prompts = [
@@ -57,7 +57,7 @@ var _s = require('underscore.string');
                 this.props = props;
                 this.bannerSize = this.props.bannerSize;
 
-                // done();
+                done();
             }.bind(this));
         },
 
