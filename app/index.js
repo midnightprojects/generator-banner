@@ -64,6 +64,8 @@ var _s = require('underscore.string');
         // ---------------------------------------------------------------------------
         writing: {
             gruntfile: function () {
+                console.log("gruntfile");
+
                 this.fs.copyTpl(
                     this.templatePath('Gruntfile.js'),
                     this.destinationPath('Gruntfile.js'),
