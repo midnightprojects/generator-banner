@@ -1,0 +1,37 @@
+{
+  "name": "generator-banner",
+  "version": "1.1.0",
+  "description": "Scaffold out an HTML5 banner",
+  "license": "MIT",
+  "repository": "midnightprojects/generator-banner",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": "https://github.com/midnightprojects"
+  },
+  "main": "app/index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "banner",
+    "web",
+    "HTML5"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "underscore.string": "^3.1.1",
+    "wiredep": "^2.2.2",
+    "yeoman-generator": "^0.20.1",
+    "yosay": "^1.0.4"
+  },
+  "devDependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt-google-cdnify": "^0.1.1"
+  }
+}

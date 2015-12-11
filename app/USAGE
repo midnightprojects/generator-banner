@@ -1,0 +1,34 @@
+Description:
+    Creates a new basic front-end web application for banners.
+
+Options:
+    
+
+Example:
+    yo banner
+
+    This will create:
+        Gruntfile.js: Configuration for the task runner.
+        bower.json: Front-end packages installed by bower.
+        package.json: Development packages installed by npm.
+
+        app/: Your application files.
+
+
+
+Grunt commands:
+
+grunt serve --target=300x250
+grunt build --target=300x250
+grunt cdnify
+grunt sprite
+
+Bower commands:
+
+bower install packagename --save
+bower wiredep
+
+
+Sub Generator:
+
+yo banner:add [name]
