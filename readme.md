@@ -11,16 +11,16 @@
 * Wire up your Bower components with [grunt-wiredep](#third-party-dependencies).
 * Sprite sheet generation support
 
-For more information on what `generator-banner` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-banner/blob/master/app/templates/_package.json) used in our `package.json`.
+For more information on what `generator-banner` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-banner/blob/master/app/templates/_package.json) used in `package.json`.
 
 
 ## Getting Started
 
 - Install: `npm install -g generator-banner`
-- Run: 'yo banner'
-- For additional sizes, run: 'yo banner:add [WIDTH]x[HEIGHT]'
-- Run: 'grunt serve --target=[WIDTH]x[HEIGHT]' for preview and live reload
-- Run: 'grunt build --target=[WIDTH]x[HEIGHT]' for a production ready build
+- Run: `yo banner`
+- For additional sizes, run: `yo banner:add [WIDTH]x[HEIGHT]`
+- Run: `grunt serve --target=[WIDTH]x[HEIGHT]` for preview and live reload
+- Run: `grunt build --target=[WIDTH]x[HEIGHT]` for a production ready build
 
 
 #### Grunt Serve Note
