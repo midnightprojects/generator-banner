@@ -57,13 +57,17 @@ var _s = require('underscore.string');
                 this.props = props;
                 this.bannerSize = this.props.bannerSize;
 
+                console.log("done!!!!");
+
                 done();
             }.bind(this));
         },
 
         // ---------------------------------------------------------------------------
         writing: {
-            gruntfile: function () {                
+            gruntfile: function () { 
+                console.log("gruntfile");
+
                 this.fs.copyTpl(
                     this.templatePath('Gruntfile.js'),
                     this.destinationPath('Gruntfile.js'),
