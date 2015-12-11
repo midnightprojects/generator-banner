@@ -32,7 +32,7 @@ var _s = require('underscore.string');
             var done = this.async();
 
             if (!this.options['skip-welcome-message']) {
-                this.log(yosay('Freakin Banners - 1'));
+                this.log(yosay('Freakin Banners!!!'));
             }
 
             var prompts = [
@@ -57,17 +57,13 @@ var _s = require('underscore.string');
                 this.props = props;
                 this.bannerSize = this.props.bannerSize;
 
-                console.log("done!!!!");
-
                 done();
             }.bind(this));
         },
 
         // ---------------------------------------------------------------------------
         writing: {
-            gruntfile: function () { 
-                console.log("gruntfile");
-
+            gruntfile: function () {
                 this.fs.copyTpl(
                     this.templatePath('Gruntfile.js'),
                     this.destinationPath('Gruntfile.js'),
@@ -78,8 +74,6 @@ var _s = require('underscore.string');
             },
 
             packageJSON: function () {
-                console.log("package.json");
-
                 this.fs.copyTpl(
                     this.templatePath('_package.json'),
                     this.destinationPath('package.json')
@@ -87,8 +81,6 @@ var _s = require('underscore.string');
             },
 
             git: function () {
-                console.log("git");
-
                 this.fs.copy(
                     this.templatePath('gitignore'),
                     this.destinationPath('.gitignore')
@@ -101,8 +93,6 @@ var _s = require('underscore.string');
             },
 
             bower: function () {
-                console.log("bower");
-
                 var bowerJson = {
                     name: _s.slugify(this.appname),
                     private: true,
@@ -121,8 +111,6 @@ var _s = require('underscore.string');
             },
 
             editorConfig: function () {
-                console.log("editorconfig");
-
                 this.fs.copy(
                     this.templatePath('editorconfig'),
                     this.destinationPath('.editorconfig')
@@ -130,8 +118,6 @@ var _s = require('underscore.string');
             },
 
             run: function() {
-                console.log("run");
-
                 this.composeWith('banner:add', {args: [this.bannerSize]});
             }
         },

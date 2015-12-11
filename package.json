@@ -13,9 +13,6 @@
   "scripts": {
     "test": "mocha --reporter spec"
   },
-  "files": [
-    "app"
-  ],
   "keywords": [
     "yeoman-generator",
     "banner",
