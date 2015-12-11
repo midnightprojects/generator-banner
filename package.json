@@ -1,6 +1,6 @@
 {
   "name": "generator-banner",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Scaffold out an HTML5 banner",
   "license": "MIT",
   "repository": "midnightprojects/generator-banner",
@@ -28,7 +28,8 @@
     "underscore.string": "^3.1.1",
     "wiredep": "^2.2.2",
     "yeoman-generator": "^0.20.1",
-    "yosay": "^1.0.4"
+    "yosay": "^1.0.4", 
+    "camelcase": "^1.2.1"
   },
   "devDependencies": {
     "grunt-cli": "^0.1.13",
