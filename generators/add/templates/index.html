@@ -13,14 +13,20 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+    <% if (bannerType === 'DoubleClick') { %>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <% } %>
+
+    <% if (bannerType === 'Sizmek') { %>
+    <script src="scripts/EBLoader.js" type="text/javascript"></script>
+    <% } %>
 </head>
 <body>
-
     <div id="banner">
         <h1>Freakin Banners!</h1>
         <p>hello</p>
     </div>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
@@ -28,6 +34,9 @@
 
     <!-- bower:js -->
     <!-- endbower -->
+
+    <script src="scripts/Banner.js"></script>
+    <script src="scripts/Animation.js"></script>
 
     <!-- build:js(.tmp) scripts/main.js -->
     <script src="scripts/main.js"></script>

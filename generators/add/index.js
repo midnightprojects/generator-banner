@@ -12,10 +12,10 @@ module.exports = yeoman.generators.Base.extend({
             required: true,
             type: String,
             desc: 'The subgenerator name'
-        });
+        });  
 
-        this.log('Adding ' + this.name + '.');
-        this.bannerSize = this.name;
+        this.bannerType = this.config.get('bannerType');
+        this.bannerSize = this.name; 
     },
 
     // ---------------------------------------------------------------------------
@@ -30,6 +30,11 @@ module.exports = yeoman.generators.Base.extend({
             this.fs.copy(
                 this.templatePath('main.js'),
                 this.destinationPath("app/" + this.bannerSize + '/scripts/main.js')
+            );
+
+            this.fs.copy(
+                this.templatePath('Banner.js'),
+                this.destinationPath("app/" + this.bannerSize + '/scripts/Banner.js')
             );
         },
 
@@ -51,7 +56,8 @@ module.exports = yeoman.generators.Base.extend({
                 this.templatePath('index.html'),
                 this.destinationPath("app/" + this.bannerSize + '/index.html'),
                 {
-                    appname: this.appname
+                    appname: this.appname, 
+                    bannerType: this.bannerType
                 }
             );
         }
