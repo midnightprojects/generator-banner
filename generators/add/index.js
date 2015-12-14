@@ -1,7 +1,7 @@
 'use strict';
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
-var wiredep = require('wiredep');
+//var wiredep = require('wiredep');
 var mkdirp = require('mkdirp');
 var camelCase = require('camelcase');
 var _s = require('underscore.string');
@@ -35,6 +35,11 @@ module.exports = yeoman.generators.Base.extend({
             this.fs.copy(
                 this.templatePath('Banner.js'),
                 this.destinationPath("app/" + this.bannerSize + '/scripts/Banner.js')
+            );
+
+            this.fs.copy(
+                this.templatePath('Animation.js'),
+                this.destinationPath("app/" + this.bannerSize + '/scripts/Animation.js')
             );
         },
 

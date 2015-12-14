@@ -20,13 +20,7 @@ Grunt commands:
 
 grunt serve --target=[WIDTH]x[HEIGHT]
 grunt build --target=[WIDTH]x[HEIGHT]
-grunt cdnify
 grunt sprite
-
-Bower commands:
-
-bower install packagename --save
-bower wiredep
 
 
 Sub Generator:

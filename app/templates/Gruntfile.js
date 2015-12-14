@@ -10,9 +10,6 @@
 
 module.exports = function (grunt) {
 
-  
-
-  grunt.loadNpmTasks('grunt-google-cdnify');
   grunt.loadNpmTasks('grunt-spritesmith');
 
   // Time how long tasks take. Can help when optimizing build times
@@ -40,18 +37,6 @@ module.exports = function (grunt) {
     // Project settings
     config: config,
 
-    // replace bower components with CDN version
-    cdnify: {
-      options: {
-        cdn: require('google-cdn-data'), 
-        componentsPath: "bower_components"
-      },
-      dist: {
-        html: ['<%%= config.dist %>/*.html'],
-        bower: 'bower.json'
-      },
-    },
-
     // convert to spritesheet
     sprite:{
       all: {
@@ -62,12 +47,12 @@ module.exports = function (grunt) {
     },
 
     // Watches files for changes and runs tasks based on the changed files
-    watch: {      
 
-      bower: {
-        files: ['bower.json'],
-        tasks: ['wiredep']
-      },
+    // bower: {
+    //   files: ['bower.json'],
+    //   tasks: ['wiredep']
+    // },
+    watch: {            
       js: {
         files: ['<%%= config.app %>/scripts/{,*/}*.js'],
         tasks: ['eslint']
@@ -189,16 +174,16 @@ module.exports = function (grunt) {
     },
 
     // Automatically inject Bower components into the HTML file
-    wiredep: {
-      app: {
-        src: ['<%%= config.app %>/index.html'],
-        ignorePath: /^(\.\.\/)*\.\./
-      },
-      sass: {
-        src: ['<%%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        ignorePath: /^(\.\.\/)+/
-      }
-    },
+    // wiredep: {
+    //   app: {
+    //     src: ['<%%= config.app %>/index.html'],
+    //     ignorePath: /^(\.\.\/)*\.\./
+    //   },
+    //   sass: {
+    //     src: ['<%%= config.app %>/styles/{,*/}*.{scss,sass}'],
+    //     ignorePath: /^(\.\.\/)+/
+    //   }
+    // },
 
     // Renames files for browser caching purposes
     filerev: {
@@ -346,9 +331,9 @@ module.exports = function (grunt) {
       return grunt.task.run(['build', 'browserSync:dist']);
     }
 
+    // 'wiredep',
     grunt.task.run([
       'clean:server',
-      'wiredep',
       'concurrent:server',
       'postcss',
       'browserSync:livereload',
@@ -375,9 +360,9 @@ module.exports = function (grunt) {
     ]);
   });
 
+  // 'wiredep',
   grunt.registerTask('build', [
     'clean:dist',
-    'wiredep',
     'useminPrepare',
     'concurrent:dist',
     'postcss',
@@ -387,8 +372,7 @@ module.exports = function (grunt) {
     'copy:dist',
     'filerev',
     'usemin',
-    'htmlmin', 
-    'cdnify'
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [

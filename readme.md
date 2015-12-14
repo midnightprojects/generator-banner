@@ -8,8 +8,7 @@
 
 * CSS Autoprefixing
 * Built-in preview server with LiveReload
-* Wire up your Bower components with [grunt-wiredep](#third-party-dependencies).
-* Sprite sheet generation support
+* Spritesheet generation support using grunt sprite
 
 For more information on what `generator-banner` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-banner/blob/master/app/templates/_package.json) used in `package.json`.
 

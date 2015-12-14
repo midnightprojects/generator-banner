@@ -22,6 +22,9 @@ app.Banner = (function () {
     function handleEnablerInit() {
         dispatchEvent(new Event("READY"));
 
+        document.getElementById('bg-exit').addEventListener('click', handleExit, false);
+
+        // Check to see if page is loaded
         if (Enabler.isPageLoaded()) {
             politeInit();
         } 
@@ -31,13 +34,34 @@ app.Banner = (function () {
                 handlePoliteInit
             );
         }
+
+        // Check to see if ad is visible on the page
+        if (Enabler.isVisible()) {
+            handleVisibility();
+        } 
+        else {
+            Enabler.addEventListener(
+                studio.events.StudioEvent.VISIBLE, 
+                handleVisibility
+            );
+        }
+    }
+
+    // --------------------------------------------------------------------------------------
+    // Load in additional assets or start the animation/video
+    function handleVisibility() {
+        dispatchEvent(new Event("AD_VISIBLE"));  
     }
 
     // --------------------------------------------------------------------------------------
     // Runs when the page is completely loaded.     
     function handlePoliteInit() {  
-        // Add your code to load creative assets or begin creative animation.
-        dispatchEvent(new Event("POLITE_READY"));
+        dispatchEvent(new Event("POLITE_READY"));        
+    }
+
+    // --------------------------------------------------------------------------------------
+    function handleExit(e) {
+        Enabler.exit('Background Exit');
     }
 
     // --------------------------------------------------------------------------------------

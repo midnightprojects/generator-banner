@@ -1,6 +1,6 @@
 {
   "name": "generator-banner",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Scaffold out an HTML5 banner",
   "license": "MIT",
   "repository": "midnightprojects/generator-banner",
@@ -29,7 +29,6 @@
     "camelcase": "^1.2.1"
   },
   "devDependencies": {
-    "grunt-cli": "^0.1.13",
-    "grunt-google-cdnify": "^0.1.1"
+    "grunt-cli": "^0.1.13"
   }
 }

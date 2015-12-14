@@ -17,11 +17,13 @@ describe('general', function () {
     this.app = require('../app');
   });
 
+
+  // 'bower.json',
+  // '.bowerrc',
+
   it('creates expected files', function () {
     assert.file([
       'package.json',
-      'bower.json',
-      '.bowerrc',
       'Gruntfile.js',
       'app/favicon.ico',
       'app/apple-touch-icon.png',

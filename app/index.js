@@ -2,7 +2,7 @@
 var generators = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
-var wiredep = require('wiredep');
+// var wiredep = require('wiredep');
 var mkdirp = require('mkdirp');
 var camelCase = require('camelcase');
 var _s = require('underscore.string');
@@ -110,7 +110,7 @@ module.exports = generators.Base.extend({
             };
 
 
-            bowerJson.dependencies['gsap'] = '~1.18.0';
+            // bowerJson.dependencies['gsap'] = '~1.18.0';
 
 
             this.fs.writeJSON('bower.json', bowerJson);
@@ -128,7 +128,6 @@ module.exports = generators.Base.extend({
         },
 
         run: function() {
-            // this.composeWith('banner:add', {args: [this.props.bannerType, this.props.bannerSize]});
             this.composeWith('banner:add', {args: [this.props.bannerSize]});
         }
     },
@@ -143,34 +142,28 @@ module.exports = generators.Base.extend({
 
     // ---------------------------------------------------------------------------
     end: function () {
-        var bowerJson = this.fs.readJSON(this.destinationPath('bower.json'));
+        // var bowerJson = this.fs.readJSON(this.destinationPath('bower.json'));
         
-        var howToInstall =
-        '\nAfter running ' +
-        chalk.yellow.bold('npm install & bower install') +
-        ', inject your' +
-        '\nfront end dependencies by running ' +
-        chalk.yellow.bold('grunt wiredep') +
-        '.';
+        var howToInstall = '\nAfter running ' + chalk.yellow.bold('npm install & bower install') + ', inject your' + '\nfront end dependencies by running ' + chalk.yellow.bold('grunt wiredep') + '.';
 
         if (this.options['skip-install']) {
             this.log(howToInstall);
             return;
         }
 
-        // wire Bower packages to .html
-        wiredep({
-            bowerJson: bowerJson,
-            src: this.props.bannerSize + '/index.html',
-            exclude: ['bootstrap.js'],
-            ignorePath: /^(\.\.\/)*\.\./
-        });
+        // // wire Bower packages to .html
+        // wiredep({
+        //     bowerJson: bowerJson,
+        //     src: this.props.bannerSize + '/index.html',
+        //     exclude: ['bootstrap.js'],
+        //     ignorePath: /^(\.\.\/)*\.\./
+        // });
 
-        // wire Bower packages to .scss
-        wiredep({
-            bowerJson: bowerJson,
-            src: this.props.bannerSize + '/styles/*.scss',
-            ignorePath: /^(\.\.\/)+/
-        });
+        // // wire Bower packages to .scss
+        // wiredep({
+        //     bowerJson: bowerJson,
+        //     src: this.props.bannerSize + '/styles/*.scss',
+        //     ignorePath: /^(\.\.\/)+/
+        // });
     }
 });

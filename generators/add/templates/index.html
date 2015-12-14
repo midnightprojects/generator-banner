@@ -6,10 +6,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -23,22 +19,20 @@
     <% } %>
 </head>
 <body>
-    <div id="banner">
-        <h1>Freakin Banners!</h1>
-        <p>hello</p>
+    <div id="banner">        
+        <h1 id="title">Freakin Banners!</h1>
+        <p id="caption">Get some</p>
+        <div id="border"></div>
+        <div id="bg-exit"></div>        
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
 
-    <!-- bower:js -->
-    <!-- endbower -->
-
+    <!-- build:js scripts/main.js -->
     <script src="scripts/Banner.js"></script>
     <script src="scripts/Animation.js"></script>
-
-    <!-- build:js(.tmp) scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->    
 </body>
