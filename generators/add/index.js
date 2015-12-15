@@ -32,10 +32,35 @@ module.exports = yeoman.generators.Base.extend({
                 this.destinationPath("app/" + this.bannerSize + '/scripts/main.js')
             );
 
-            this.fs.copy(
-                this.templatePath('Banner.js'),
-                this.destinationPath("app/" + this.bannerSize + '/scripts/Banner.js')
-            );
+            if (this.bannerType === "DoubleClick") {
+                this.fs.copy(
+                    this.templatePath('BannerDoubleClick.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/BannerDoubleClick.js')
+                );
+            }
+
+            if (this.bannerType === "Sizmek") {
+                this.fs.copy(
+                    this.templatePath('BannerSizmek.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/BannerSizmek.js')
+                );
+            }
+
+            if (this.bannerType === "Flashtalking") {
+                this.fs.copy(
+                    this.templatePath('BannerFlashtalking.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/BannerFlashtalking.js')
+                );
+
+                this.fs.copyTpl(
+                    this.templatePath('manifest.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/manifest.js'), 
+                    {
+                        bannerWidth: parseInt(this.bannerSize.split("x")[0]), 
+                        bannerHeight: parseInt(this.bannerSize.split("x")[1])
+                    }
+                );
+            }            
 
             this.fs.copy(
                 this.templatePath('Animation.js'),

@@ -15,7 +15,11 @@
     <% } %>
 
     <% if (bannerType === 'Sizmek') { %>
-    <script src="scripts/EBLoader.js" type="text/javascript"></script>
+    <script src="scripts/EBLoader.js"></script>
+    <% } %>
+
+    <% if (bannerType === 'Flashtalking') { %>
+    <script src="http://cdn.flashtalking.com/frameworks/js/api/2/9/html5API.js"></script>
     <% } %>
 </head>
 <body>
@@ -31,7 +35,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
 
     <!-- build:js scripts/main.js -->
-    <script src="scripts/Banner.js"></script>
+    <% if (bannerType === 'DoubleClick') { %><script src="scripts/BannerDoubleClick.js"></script><% } %>
+    <% if (bannerType === 'Sizmek') { %><script src="scripts/BannerSizmek.js"></script><% } %>
+    <% if (bannerType === 'Flashtalking') { %><script src="scripts/BannerFlashtalking.js"></script><% } %>
     <script src="scripts/Animation.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->    
