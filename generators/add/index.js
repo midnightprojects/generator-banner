@@ -15,6 +15,7 @@ module.exports = yeoman.generators.Base.extend({
         });  
 
         this.bannerType = this.config.get('bannerType');
+        this.includeZepto = this.config.get('includeZepto');
         this.bannerSize = this.name; 
     },
 
@@ -87,7 +88,8 @@ module.exports = yeoman.generators.Base.extend({
                 this.destinationPath("app/" + this.bannerSize + '/index.html'),
                 {
                     appname: this.appname, 
-                    bannerType: this.bannerType
+                    bannerType: this.bannerType, 
+                    includeZepto: this.includeZepto
                 }
             );
         }

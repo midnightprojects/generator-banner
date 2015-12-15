@@ -1,9 +1,10 @@
 var app = app || {}; 
 
 
-app.Banner.initialize();
+
 
 this.addEventListener('READY', handleReady, false);
+app.Banner.initialize();
 
 function handleReady(e) {
 	console.log("READY: " + e);

@@ -17,8 +17,6 @@ app.Animation = (function () {
 	// --------------------------------------------------------------------------------------
 	// Starts the animation
 	function start() {
-		console.log("starting animation");
-
 		init();
 
 		TweenLite.to(title, 1, {scale:1, ease:Cubic.easeInOut});

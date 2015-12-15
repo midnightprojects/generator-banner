@@ -1,13 +1,14 @@
 var app = app || {}; 
 
 
-app.Banner = (function () { 
+app.Banner = (function () {
+
+    var button; 
 
     // --------------------------------------------------------------------------------------
     function initialize() {
-        // container = myFT.$("#container");
-        // myFT.applyClickTag(container, 1);
-
+        button = myFT.$("#button-exit");
+        myFT.applyClickTag(button, 1);
     }
 
     // --------------------------------------------------------------------------------------

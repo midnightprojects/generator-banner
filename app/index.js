@@ -57,7 +57,13 @@ module.exports = generators.Base.extend({
                 name: 'bannerSize',
                 message: 'What size do you need? (300x250):',
                 default: "300x250"
-            }
+            }, 
+            {
+                type: 'confirm',
+                name: 'includeZepto',
+                message: 'Include Zepto?',
+                default: true
+            },   
         ];
 
         this.prompt(prompts, function (props) {
@@ -69,6 +75,7 @@ module.exports = generators.Base.extend({
     // ---------------------------------------------------------------------------
     config: function() {
         this.config.set('bannerType', this.props.bannerType);
+        this.config.set('includeZepto', this.props.includeZepto);
     },
 
     // ---------------------------------------------------------------------------

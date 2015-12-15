@@ -1,67 +1,32 @@
 var app = app || {}; 
 
 
-app.Banner = (function () { 
+app.Banner = (function () {    
 
     // --------------------------------------------------------------------------------------
-    // check to see if Enabler has initialized
+    // check to see if EB has initialized
     function initialize() {
-        if (Enabler.isInitialized()) {
-            enablerInitHandler();
+        if (!EB.isInitialized()) {
+            EB.addEventListener(
+                EBG.EventName.EB_INITIALIZED, 
+                handleEBInit
+            );
         } 
         else {
-            Enabler.addEventListener(
-                studio.events.StudioEvent.INIT, 
-                handleEnablerInit
-            );
+            handleEBInit();
         }
     }
 
     // --------------------------------------------------------------------------------------
-    // Runs when Enabler is ready.
-    function handleEnablerInit() {
+    // Runs when EB is ready.
+    function handleEBInit() {
         dispatchEvent(new Event("READY"));
-
-        document.getElementById('bg-exit').addEventListener('click', handleExit, false);
-
-        // Check to see if page is loaded
-        if (Enabler.isPageLoaded()) {
-            politeInit();
-        } 
-        else {
-            Enabler.addEventListener(
-                studio.events.StudioEvent.PAGE_LOADED, 
-                handlePoliteInit
-            );
-        }
-
-        // Check to see if ad is visible on the page
-        if (Enabler.isVisible()) {
-            handleVisibility();
-        } 
-        else {
-            Enabler.addEventListener(
-                studio.events.StudioEvent.VISIBLE, 
-                handleVisibility
-            );
-        }
-    }
-
-    // --------------------------------------------------------------------------------------
-    // Load in additional assets or start the animation/video
-    function handleVisibility() {
-        dispatchEvent(new Event("AD_VISIBLE"));  
-    }
-
-    // --------------------------------------------------------------------------------------
-    // Runs when the page is completely loaded.     
-    function handlePoliteInit() {  
-        dispatchEvent(new Event("POLITE_READY"));        
+        document.getElementById('button-exit').addEventListener('click', handleExit, false);        
     }
 
     // --------------------------------------------------------------------------------------
     function handleExit(e) {
-        Enabler.exit('Background Exit');
+        EB.clickthrough();
     }
 
     // --------------------------------------------------------------------------------------

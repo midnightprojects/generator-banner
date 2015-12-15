@@ -22,7 +22,7 @@ app.Banner = (function () {
     function handleEnablerInit() {
         dispatchEvent(new Event("READY"));
 
-        document.getElementById('bg-exit').addEventListener('click', handleExit, false);
+        document.getElementById('button-exit').addEventListener('click', handleExit, false);
 
         // Check to see if page is loaded
         if (Enabler.isPageLoaded()) {
