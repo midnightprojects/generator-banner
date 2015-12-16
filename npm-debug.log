@@ -1,0 +1,139 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.3.6
+3 info using node@v5.0.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/sprocket3000/Documents/Design/Projects/Tests/generator-banner',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/sprocket3000/.npm/generator-banner/1.1.7/package.tgz not in flight; packing
+9 info lifecycle generator-banner@1.1.7~prepublish: generator-banner@1.1.7
+10 silly lifecycle generator-banner@1.1.7~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/Users/sprocket3000/.npm/generator-banner/1.1.7/package.tgz',
+11 verbose tar pack   '/Users/sprocket3000/Documents/Design/Projects/Tests/generator-banner' ]
+12 verbose tarball /Users/sprocket3000/.npm/generator-banner/1.1.7/package.tgz
+13 verbose folder /Users/sprocket3000/Documents/Design/Projects/Tests/generator-banner
+14 verbose addLocalTarball adding from inside cache /Users/sprocket3000/.npm/generator-banner/1.1.7/package.tgz
+15 silly cache afterAdd generator-banner@1.1.7
+16 verbose afterAdd /Users/sprocket3000/.npm/generator-banner/1.1.7/package/package.json not in flight; writing
+17 verbose afterAdd /Users/sprocket3000/.npm/generator-banner/1.1.7/package/package.json written
+18 silly publish { name: 'generator-banner',
+18 silly publish   version: '1.1.7',
+18 silly publish   description: 'Scaffold out an HTML5 banner',
+18 silly publish   license: 'MIT',
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/midnightprojects/generator-banner.git' },
+18 silly publish   author: { url: 'https://github.com/midnightprojects' },
+18 silly publish   main: 'app/index.js',
+18 silly publish   scripts: { test: 'mocha --reporter spec' },
+18 silly publish   keywords: [ 'yeoman-generator', 'banner', 'web', 'HTML5' ],
+18 silly publish   dependencies:
+18 silly publish    { chalk: '^1.0.0',
+18 silly publish      mkdirp: '^0.5.1',
+18 silly publish      'underscore.string': '^3.1.1',
+18 silly publish      wiredep: '^2.2.2',
+18 silly publish      'yeoman-generator': '^0.20.1',
+18 silly publish      yosay: '^1.0.4',
+18 silly publish      camelcase: '^1.2.1' },
+18 silly publish   devDependencies: { 'grunt-cli': '^0.1.13' },
+18 silly publish   readme: '# Banner generator\n\n[Yeoman](http://yeoman.io) generator for HTML5 banner development.\n\n![](http://i.imgur.com/VrkuFOg.jpg)\n\n## Features\n\n* CSS Autoprefixing\n* Built-in preview server with LiveReload\n* Spritesheet generation support using grunt sprite\n\nFor more information on what `generator-banner` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-banner/blob/master/app/templates/_package.json) used in `package.json`.\n\n\n## Getting Started\n\n- Install: `npm install -g generator-banner`\n- Run: `yo banner`\n- For additional sizes, run: `yo banner:add [WIDTH]x[HEIGHT]`\n- Run: `grunt serve --target=[WIDTH]x[HEIGHT]` for preview and live reload\n- Run: `grunt build --target=[WIDTH]x[HEIGHT]` for a production ready build\n\n\n#### Grunt Serve Note\n\nNote: `grunt server` was used for previewing in earlier versions of the project, and has since been deprecated in favor of `grunt serve`.\n\n\n## Options\n\n* `--skip-install`\n\n  Skips the automatic execution of `bower` and `npm` after scaffolding has finished.\n\n\n## License\n\n[MIT license](https://opensource.org/licenses/MIT)\n',
+18 silly publish   readmeFilename: 'readme.md',
+18 silly publish   gitHead: 'a945026981709ae72d4c93cee6274a43cad77639',
+18 silly publish   bugs: { url: 'https://github.com/midnightprojects/generator-banner/issues' },
+18 silly publish   homepage: 'https://github.com/midnightprojects/generator-banner#readme',
+18 silly publish   _id: 'generator-banner@1.1.7',
+18 silly publish   _shasum: '81efbf9746aea0f9d23fcf8754f1a85af957da82',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name generator-banner
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/generator-banner
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /Users/sprocket3000/.npm/generator-banner/1.1.7/package.tgz
+26 verbose request uri https://registry.npmjs.org/generator-banner
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 4:07:56 PM
+29 verbose request using bearer token for auth
+30 verbose request id 0ebe4bba78c3b1d0
+31 http request PUT https://registry.npmjs.org/generator-banner
+32 info retry will retry, error on last attempt: Error: socket hang up
+33 info attempt registry request try #2 at 4:09:07 PM
+34 verbose request using bearer token for auth
+35 http request PUT https://registry.npmjs.org/generator-banner
+36 http 504 https://registry.npmjs.org/generator-banner
+37 verbose bad json <html><body><h1>504 Gateway Time-out</h1>
+37 verbose bad json The server didn't respond in time.
+37 verbose bad json </body></html>
+38 error registry error parsing json
+39 verbose headers { 'content-type': 'text/html',
+39 verbose headers   'cache-control': 'max-age=300',
+39 verbose headers   'transfer-encoding': 'chunked',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   date: 'Wed, 16 Dec 2015 00:09:57 GMT',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   connection: 'keep-alive',
+39 verbose headers   'x-served-by': 'cache-lax1427-LAX',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1450224547.782476,VS0,VE50144' }
+40 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+40 info retry <html><body><h1>504 Gateway Time-out</h1>
+40 info retry The server didn't respond in time.
+40 info retry </body></html>
+41 info attempt registry request try #3 at 4:10:57 PM
+42 verbose request using bearer token for auth
+43 http request PUT https://registry.npmjs.org/generator-banner
+44 http 504 https://registry.npmjs.org/generator-banner
+45 verbose bad json <html><body><h1>504 Gateway Time-out</h1>
+45 verbose bad json The server didn't respond in time.
+45 verbose bad json </body></html>
+46 error registry error parsing json
+47 verbose headers { 'content-type': 'text/html',
+47 verbose headers   'cache-control': 'max-age=300',
+47 verbose headers   'transfer-encoding': 'chunked',
+47 verbose headers   'accept-ranges': 'bytes',
+47 verbose headers   date: 'Wed, 16 Dec 2015 00:11:48 GMT',
+47 verbose headers   via: '1.1 varnish',
+47 verbose headers   connection: 'keep-alive',
+47 verbose headers   'x-served-by': 'cache-sjc3135-SJC',
+47 verbose headers   'x-cache': 'MISS',
+47 verbose headers   'x-cache-hits': '0',
+47 verbose headers   'x-timer': 'S1450224658.005424,VS0,VE50109' }
+48 verbose request invalidating /Users/sprocket3000/.npm/registry.npmjs.org/generator-banner on PUT
+49 error publish Failed PUT 504
+50 verbose stack SyntaxError: Unexpected token <
+50 verbose stack <html><body><h1>504 Gateway Time-out</h1>
+50 verbose stack The server didn't respond in time.
+50 verbose stack </body></html>
+50 verbose stack
+50 verbose stack
+50 verbose stack     at Object.parse (native)
+50 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:199:23)
+50 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+50 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+50 verbose stack     at emitTwo (events.js:87:13)
+50 verbose stack     at Request.emit (events.js:172:7)
+50 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1063:14)
+50 verbose stack     at emitOne (events.js:82:20)
+50 verbose stack     at Request.emit (events.js:169:7)
+50 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+51 verbose cwd /Users/sprocket3000/Documents/Design/Projects/Tests/generator-banner
+52 error Darwin 15.0.0
+53 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+54 error node v5.0.0
+55 error npm  v3.3.6
+56 error Unexpected token <
+56 error <html><body><h1>504 Gateway Time-out</h1>
+56 error The server didn't respond in time.
+56 error </body></html>
+57 error If you need help, you may report this error at:
+57 error     <https://github.com/npm/npm/issues>
+58 verbose exit [ 1, true ]
