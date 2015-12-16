@@ -6,7 +6,9 @@ app.Animation = (function () {
 	var title;
 	var caption;
 
-	function init() {
+	// --------------------------------------------------------------------------------------
+	// set default properties
+	function initialize() {
 		title = document.getElementById('title');
 		caption = document.getElementById('caption');
 
@@ -17,8 +19,6 @@ app.Animation = (function () {
 	// --------------------------------------------------------------------------------------
 	// Starts the animation
 	function start() {
-		init();
-
 		TweenLite.to(title, 1, {scale:1, ease:Cubic.easeInOut});
 		TweenLite.to(caption, 1, {scale:1, ease:Cubic.easeInOut});
 	} 
@@ -32,6 +32,7 @@ app.Animation = (function () {
 	// --------------------------------------------------------------------------------------
 	// Publicly accessible methods and properties
 	return {
+		initialize:initialize,
 		start:start, 
 		stop:stop
 	}
