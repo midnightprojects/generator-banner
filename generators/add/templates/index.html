@@ -8,8 +8,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <% if (bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script><% } %>
-    <% if (bannerType === 'Flashtalking') { %><script src="http://cdn.flashtalking.com/frameworks/js/api/2/9/html5API.js"></script><% } %>
+    <% if (bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script><% } %>    
     <% if (bannerType === 'Sizmek') { %>
     <script>
         document.write("<script src='" + (document.location.protocol === "https:" ? "https://secure-" : "http://") + "ds.serving-sys.com/BurstingScript/EBLoader.js'><\/script>"); 
@@ -28,6 +27,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+
+    <% if (bannerType === 'Flashtalking') { %><script src="http://cdn.flashtalking.com/frameworks/js/api/2/9/html5API.js"></script><% } %>
 
     <!-- build:js scripts/main.js -->
     <% if (bannerType === 'DoubleClick') { %><script src="scripts/BannerDoubleClick.js"></script><% } %>

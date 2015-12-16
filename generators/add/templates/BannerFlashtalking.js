@@ -9,6 +9,8 @@ app.Banner = (function () {
     function initialize() {
         button = myFT.$("#button-exit");
         myFT.applyClickTag(button, 1);
+
+        dispatchEvent(new Event("READY"));
     }
 
     // --------------------------------------------------------------------------------------
