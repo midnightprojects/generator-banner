@@ -61,7 +61,14 @@ module.exports = yeoman.generators.Base.extend({
                         bannerHeight: parseInt(this.bannerSize.split("x")[1])
                     }
                 );
-            }            
+            } 
+
+            if (this.bannerType === "None") {
+                this.fs.copy(
+                    this.templatePath('Banner.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/Banner.js')
+                );
+            }           
 
             this.fs.copy(
                 this.templatePath('Animation.js'),
