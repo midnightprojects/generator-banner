@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <% if (bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script><% } %>    
-    <% if (bannerType === 'Sizmek') { %>
-    <script>
-        document.write("<script src='" + (document.location.protocol === "https:" ? "https://secure-" : "http://") + "ds.serving-sys.com/BurstingScript/EBLoader.js'><\/script>"); 
-    </script>
-    <% } %>
+    <% if (bannerType === 'Sizmek') { %><script src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script><% } %>
 </head>
 <body>
     <div id="banner">        
