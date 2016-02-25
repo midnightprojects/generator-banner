@@ -20,8 +20,6 @@ app.Banner = (function () {
     // --------------------------------------------------------------------------------------
     // Runs when Enabler is ready.
     function handleEnablerInit() {
-        dispatchEvent(new Event("READY"));
-
         document.getElementById('button-exit').addEventListener('click', handleExit, false);
 
         // Check to see if page is loaded
@@ -50,7 +48,7 @@ app.Banner = (function () {
     // --------------------------------------------------------------------------------------
     // Load in additional assets or start the animation/video
     function handleVisibility() {
-        dispatchEvent(new Event("AD_VISIBLE"));  
+        dispatchEvent(new Event("READY"));
     }
 
     // --------------------------------------------------------------------------------------
