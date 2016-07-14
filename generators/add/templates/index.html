@@ -10,6 +10,7 @@
     <!-- endbuild -->
     <% if (bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script><% } %>    
     <% if (bannerType === 'Sizmek') { %><script src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script><% } %>
+    <% if (bannerType === 'None') { %><script>var clickTag=" "</script><% } %>
 </head>
 <body>
     <div id="banner">        
