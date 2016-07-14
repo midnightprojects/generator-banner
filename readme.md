@@ -2,7 +2,7 @@
 
 [Yeoman](http://yeoman.io) generator for HTML5 banner development.
 
-![](http://i.imgur.com/VrkuFOg.jpg)
+![](http://bit.ly/29I0aIq)
 
 ## Features
 
@@ -10,28 +10,15 @@
 * Built-in preview server with LiveReload
 * Spritesheet generation support using grunt sprite
 
-For more information on what `generator-banner` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-banner/blob/master/app/templates/_package.json) used in `package.json`.
-
 
 ## Getting Started
 
-- Install: `npm install -g generator-banner`
-- Run: `yo banner`
-- For additional sizes, run: `yo banner:add [WIDTH]x[HEIGHT]`
-- Run: `grunt serve --target=[WIDTH]x[HEIGHT]` for preview and live reload
-- Run: `grunt build --target=[WIDTH]x[HEIGHT]` for a production ready build
-
-
-#### Grunt Serve Note
-
-Note: `grunt server` was used for previewing in earlier versions of the project, and has since been deprecated in favor of `grunt serve`.
-
-
-## Options
-
-* `--skip-install`
-
-  Skips the automatic execution of `bower` and `npm` after scaffolding has finished.
+- Install `npm install -g generator-banner`
+- Create a new project folder and cd into it
+- Run `yo banner` and follow the instructions
+- For additional sizes, run `yo banner:add WIDTHxHEIGHT`
+- Run `grunt serve --target=WIDTHxHEIGHT` for preview and live reload
+- Run `grunt build --target=WIDTHxHEIGHT` for a production ready build
 
 
 ## License

@@ -8,23 +8,23 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <% if (bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script><% } %>    
+    <% if (bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script><% } %>
     <% if (bannerType === 'Sizmek') { %><script src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script><% } %>
     <% if (bannerType === 'None') { %><script>var clickTag=" "</script><% } %>
 </head>
 <body>
-    <div id="banner">        
+    <div id="banner">
         <h1 id="title">Freakin Banners!</h1>
         <p id="caption">Get some</p>
         <div id="border"></div>
-        <div id="button-exit"></div>        
+        <div id="button-exit"></div>
     </div>
 
     <% if (includeZepto == true) { %><script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script><% } %>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/CSSPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/easing/EasePack.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenLite.min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssplugin_1.18.0_71489205621d46cbe88348eeb8fe493f_min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/easepack_1.18.0_ed5816e732515f56d96a67f6a2a15ccb_min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenlite_1.18.0_56fa823cfbbef1c2f4d4346f0f0e6c3c_min.js"></script>
 
     <% if (bannerType === 'Flashtalking') { %><script src="http://cdn.flashtalking.com/frameworks/js/api/2/9/html5API.js"></script><% } %>
 
@@ -35,6 +35,6 @@
     <% if (bannerType === 'None') { %><script src="scripts/Banner.js"></script><% } %>
     <script src="scripts/Animation.js"></script>
     <script src="scripts/main.js"></script>
-    <!-- endbuild -->    
+    <!-- endbuild -->
 </body>
 </html>

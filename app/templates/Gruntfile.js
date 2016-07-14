@@ -30,7 +30,7 @@ module.exports = function (grunt) {
   var env = grunt.option('target') || "app";
   config.app = "app/" + env;
   config.dist = "dist/" + env;
- 
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -52,7 +52,7 @@ module.exports = function (grunt) {
     //   files: ['bower.json'],
     //   tasks: ['wiredep']
     // },
-    watch: {            
+    watch: {
       js: {
         files: ['<%%= config.app %>/scripts/{,*/}*.js'],
         tasks: ['eslint']
@@ -308,7 +308,7 @@ module.exports = function (grunt) {
             'fonts/{,*/}*.*'
           ]
         }]
-      }      
+      }
     },
 
     // Run some tasks in parallel to speed up build process
