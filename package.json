@@ -1,12 +1,12 @@
 {
   "name": "generator-banner",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Scaffold out an HTML5 banner",
   "license": "MIT",
   "repository": "midnightprojects/generator-banner",
   "author": {
-    "name": "",
-    "email": "",
+    "name": "Tri Nguyen",
+    "email": "tri@midnightprojects.com",
     "url": "https://github.com/midnightprojects"
   },
   "main": "app/index.js",
@@ -17,7 +17,8 @@
     "yeoman-generator",
     "banner",
     "web",
-    "HTML5"
+    "HTML5",
+    "scaffold"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
