@@ -1,35 +1,34 @@
 {
-  "name": "generator-banner",
-  "version": "1.9.1",
-  "description": "Scaffold out an HTML5 banner",
-  "license": "MIT",
-  "repository": "midnightprojects/generator-banner",
-  "author": {
-    "name": "Tri Nguyen",
-    "email": "tri@midnightprojects.com",
-    "url": "https://github.com/midnightprojects"
-  },
-  "main": "app/index.js",
-  "scripts": {
-    "test": "mocha --reporter spec"
-  },
-  "keywords": [
-    "yeoman-generator",
-    "banner",
-    "web",
-    "HTML5",
-    "scaffold"
-  ],
-  "dependencies": {
-    "chalk": "^1.0.0",
-    "mkdirp": "^0.5.1",
-    "underscore.string": "^3.1.1",
-    "wiredep": "^2.2.2",
-    "yeoman-generator": "^0.20.1",
-    "yosay": "^1.0.4",
-    "camelcase": "^1.2.1"
-  },
-  "devDependencies": {
-    "grunt-cli": "^0.1.13"
-  }
+    "name": "generator-banner",
+    "version": "1.9.2",
+    "description": "Scaffold out an HTML5 banner",
+    "license": "MIT",
+    "repository": "midnightprojects/generator-banner",
+    "author": {
+        "name": "Tri Nguyen",
+        "email": "tri@midnightprojects.com",
+        "url": "https://github.com/midnightprojects"
+    },
+    "main": "app/index.js",
+    "scripts": {
+        "test": "mocha --reporter spec"
+    },
+    "keywords": [
+        "yeoman-generator",
+        "banner",
+        "web",
+        "HTML5",
+        "scaffold"
+    ],
+    "dependencies": {
+        "chalk": "^1.0.0",
+        "mkdirp": "^0.5.1",
+        "underscore.string": "^3.1.1",
+        "yeoman-generator": "^0.20.1",
+        "yosay": "^1.0.4",
+        "camelcase": "^1.2.1"
+    },
+    "devDependencies": {
+        "grunt-cli": "^0.1.13"
+    }
 }

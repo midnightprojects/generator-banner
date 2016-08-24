@@ -2,7 +2,6 @@
 var generators = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
-// var wiredep = require('wiredep');
 var mkdirp = require('mkdirp');
 var camelCase = require('camelcase');
 var _s = require('underscore.string');
@@ -44,7 +43,7 @@ module.exports = generators.Base.extend({
                 filter: function(answer) {
                     return camelCase(answer)
                 }
-            }, 
+            },
             {
                 type: 'list',
                 name: 'bannerType',
@@ -57,13 +56,13 @@ module.exports = generators.Base.extend({
                 name: 'bannerSize',
                 message: 'What size do you need? (300x250):',
                 default: "300x250"
-            }, 
+            },
             {
                 type: 'confirm',
                 name: 'includeZepto',
                 message: 'Include Zepto?',
                 default: true
-            },   
+            },
         ];
 
         this.prompt(prompts, function (props) {
@@ -109,24 +108,6 @@ module.exports = generators.Base.extend({
             );
         },
 
-        bower: function () {
-            var bowerJson = {
-                name: _s.slugify(this.appname),
-                private: true,
-                dependencies: {}
-            };
-
-
-            // bowerJson.dependencies['gsap'] = '~1.18.0';
-
-
-            this.fs.writeJSON('bower.json', bowerJson);
-            this.fs.copy(
-                this.templatePath('bowerrc'),
-                this.destinationPath('.bowerrc')
-            );
-        },
-
         editorConfig: function () {
             this.fs.copy(
                 this.templatePath('editorconfig'),
@@ -149,28 +130,11 @@ module.exports = generators.Base.extend({
 
     // ---------------------------------------------------------------------------
     end: function () {
-        // var bowerJson = this.fs.readJSON(this.destinationPath('bower.json'));
-        
         var howToInstall = '\nAfter running ' + chalk.yellow.bold('npm install & bower install') + ', inject your' + '\nfront end dependencies by running ' + chalk.yellow.bold('grunt wiredep') + '.';
 
         if (this.options['skip-install']) {
             this.log(howToInstall);
             return;
         }
-
-        // // wire Bower packages to .html
-        // wiredep({
-        //     bowerJson: bowerJson,
-        //     src: this.props.bannerSize + '/index.html',
-        //     exclude: ['bootstrap.js'],
-        //     ignorePath: /^(\.\.\/)*\.\./
-        // });
-
-        // // wire Bower packages to .scss
-        // wiredep({
-        //     bowerJson: bowerJson,
-        //     src: this.props.bannerSize + '/styles/*.scss',
-        //     ignorePath: /^(\.\.\/)+/
-        // });
     }
 });
