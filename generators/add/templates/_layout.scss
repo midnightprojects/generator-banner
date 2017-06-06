@@ -14,6 +14,7 @@ body {
     top: 50%;
     margin-left: -$banner-width / 2;
     margin-top: -$banner-height / 2;
+    opacity: 0;
 
     #button-exit {
         background-color: rgba(255, 255, 255, 0);

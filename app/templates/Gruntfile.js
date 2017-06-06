@@ -329,7 +329,6 @@ module.exports = function (grunt) {
         var galvanizeConfig = [];
 
 
-
         for (var i in targets) {
             galvanizeConfig.push({
                 configs: {app:"app/" + targets[i], dist:"dist/" + targets[i]}
@@ -337,7 +336,6 @@ module.exports = function (grunt) {
 
             grunt.log.writeln(galvanizeConfig[i].configs.app);
         }
-
 
 
         grunt.option('galvanizeConfig', galvanizeConfig);

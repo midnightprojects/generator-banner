@@ -1,6 +1,6 @@
 {
     "name": "generator-banner",
-    "version": "1.9.2",
+    "version": "1.9.3",
     "description": "Scaffold out an HTML5 banner",
     "license": "MIT",
     "repository": "midnightprojects/generator-banner",

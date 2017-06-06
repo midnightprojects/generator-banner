@@ -1,27 +1,29 @@
-var app = app || {}; 
+var app = app || {};
 
 
 app.Animation = (function () {
 
-	var title;
-	var caption;
+	var banner = document.getElementById('banner');
+	var title = document.getElementById('title');
+	var caption = document.getElementById('caption');
+	var t = TweenMax;
 
 	// --------------------------------------------------------------------------------------
 	// set default properties
 	function initialize() {
-		title = document.getElementById('title');
-		caption = document.getElementById('caption');
+		// DO NOT EDIT: reveals banner once loaded
+		t.set(banner, {opacity:1});
 
-		TweenLite.set(title, {scale:0});
-		TweenLite.set(caption, {scale:0});
+		t.set(title, {scale:0});
+		t.set(caption, {scale:0});
 	}
 
 	// --------------------------------------------------------------------------------------
 	// Starts the animation
 	function start() {
-		TweenLite.to(title, 1, {scale:1, ease:Cubic.easeInOut});
-		TweenLite.to(caption, 1, {scale:1, ease:Cubic.easeInOut});
-	} 
+		t.to(title, 1, {scale:1, ease:Cubic.easeInOut});
+		t.to(caption, 1, {scale:1, ease:Cubic.easeInOut});
+	}
 
 	// --------------------------------------------------------------------------------------
 	// Stops the animation
@@ -33,7 +35,7 @@ app.Animation = (function () {
 	// Publicly accessible methods and properties
 	return {
 		initialize:initialize,
-		start:start, 
+		start:start,
 		stop:stop
 	}
 

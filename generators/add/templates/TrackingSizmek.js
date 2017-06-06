@@ -1,17 +1,17 @@
-var app = app || {}; 
+var app = app || {};
 
 
-app.Banner = (function () {    
+app.Tracking = (function () {
 
     // --------------------------------------------------------------------------------------
     // check to see if EB has initialized
     function initialize() {
         if (!EB.isInitialized()) {
             EB.addEventListener(
-                EBG.EventName.EB_INITIALIZED, 
+                EBG.EventName.EB_INITIALIZED,
                 handleEBInit
             );
-        } 
+        }
         else {
             handleEBInit();
         }
@@ -20,8 +20,12 @@ app.Banner = (function () {
     // --------------------------------------------------------------------------------------
     // Runs when EB is ready.
     function handleEBInit() {
-        dispatchEvent(new Event("READY"));
-        document.getElementById('button-exit').addEventListener('click', handleExit, false);        
+        // Create the event.
+        var event = document.createEvent('Event');
+        event.initEvent('READY', true, true);
+        document.dispatchEvent(event);
+
+        document.getElementById('button-exit').addEventListener('click', handleExit, false);
     }
 
     // --------------------------------------------------------------------------------------
@@ -31,7 +35,7 @@ app.Banner = (function () {
 
     // --------------------------------------------------------------------------------------
     // Publicly accessible methods and properties
-    return { 
-        initialize:initialize    
+    return {
+        initialize:initialize
     }
 })();

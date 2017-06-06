@@ -25,6 +25,7 @@ module.exports = yeoman.generators.Base.extend({
             mkdirp("app/" + this.bannerSize);
             mkdirp("app/" + this.bannerSize + '/images');
             mkdirp("app/" + this.bannerSize + '/fonts');
+            mkdirp("app/" + this.bannerSize + '/media');
         },
 
         scripts: function () {
@@ -35,22 +36,22 @@ module.exports = yeoman.generators.Base.extend({
 
             if (this.bannerType === "DoubleClick") {
                 this.fs.copy(
-                    this.templatePath('BannerDoubleClick.js'),
-                    this.destinationPath("app/" + this.bannerSize + '/scripts/BannerDoubleClick.js')
+                    this.templatePath('TrackingDoubleClick.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/TrackingDoubleClick.js')
                 );
             }
 
             if (this.bannerType === "Sizmek") {
                 this.fs.copy(
-                    this.templatePath('BannerSizmek.js'),
-                    this.destinationPath("app/" + this.bannerSize + '/scripts/BannerSizmek.js')
+                    this.templatePath('TrackingSizmek.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/TrackingSizmek.js')
                 );
             }
 
             if (this.bannerType === "Flashtalking") {
                 this.fs.copy(
-                    this.templatePath('BannerFlashtalking.js'),
-                    this.destinationPath("app/" + this.bannerSize + '/scripts/BannerFlashtalking.js')
+                    this.templatePath('TrackingFlashtalking.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/TrackingFlashtalking.js')
                 );
 
                 this.fs.copyTpl(
@@ -63,10 +64,17 @@ module.exports = yeoman.generators.Base.extend({
                 );
             }
 
+            if (this.bannerType === "DCM") {
+                this.fs.copy(
+                    this.templatePath('TrackingDCM.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/TrackingDCM.js')
+                );
+            }
+
             if (this.bannerType === "None") {
                 this.fs.copy(
-                    this.templatePath('Banner.js'),
-                    this.destinationPath("app/" + this.bannerSize + '/scripts/Banner.js')
+                    this.templatePath('TrackingNone.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/TrackingNone.js')
                 );
             }
 
@@ -120,6 +128,12 @@ module.exports = yeoman.generators.Base.extend({
                     bannerHeight: this.bannerSize.split("x")[1] + "px"
                 }
             )
+
+            this.fs.copyTpl(
+                this.templatePath('_sprites.scss'),
+                this.destinationPath("app/" + this.bannerSize + '/styles/' + '_sprites.scss'),
+                {}
+            )
         },
 
         html: function () {
@@ -129,7 +143,8 @@ module.exports = yeoman.generators.Base.extend({
                 {
                     appname: this.appname,
                     bannerType: this.bannerType,
-                    includeZepto: this.includeZepto
+                    includeZepto: this.includeZepto,
+                    dimensions: "width=" + this.bannerSize.split("x")[0] + ",height=" + this.bannerSize.split("x")[1]
                 }
             );
         }

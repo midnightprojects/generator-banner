@@ -4,7 +4,7 @@ var app = app || {};
 
 	this.addEventListener('READY', handleReady, false);
 	app.Animation.initialize();
-	app.Banner.initialize();
+	app.Tracking.initialize();
 
 	function handleReady(e) {
 		console.log("READY: " + e);

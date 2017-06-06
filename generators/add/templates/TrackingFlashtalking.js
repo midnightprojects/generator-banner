@@ -1,21 +1,23 @@
-var app = app || {}; 
+var app = app || {};
 
 
-app.Banner = (function () {
+app.Tracking = (function () {
 
-    var button; 
+    var button;
 
     // --------------------------------------------------------------------------------------
     function initialize() {
         button = myFT.$("#button-exit");
         myFT.applyClickTag(button, 1);
 
-        dispatchEvent(new Event("READY"));
+        var event = document.createEvent('Event');
+        event.initEvent('READY', true, true);
+        document.dispatchEvent(event);
     }
 
     // --------------------------------------------------------------------------------------
     // Publicly accessible methods and properties
-    return { 
-        initialize:initialize    
+    return {
+        initialize:initialize
     }
 })();
