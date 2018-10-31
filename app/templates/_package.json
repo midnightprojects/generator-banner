@@ -3,7 +3,7 @@
     "devDependencies": {
         "autoprefixer": "^6.0.2",
         "grunt": "^0.4.5",
-        "grunt-browser-sync": "^2.1.2",
+        "grunt-browser-sync": "^1.9.1",
         "grunt-concurrent": "^1.0.0",
         "grunt-contrib-clean": "^0.6.0",
         "grunt-contrib-concat": "^0.5.1",

@@ -82,6 +82,11 @@ module.exports = yeoman.generators.Base.extend({
                 this.templatePath('Animation.js'),
                 this.destinationPath("app/" + this.bannerSize + '/scripts/Animation.js')
             );
+
+            this.fs.copy(
+                this.templatePath('gsap_extras'),
+                this.destinationPath("app/" + this.bannerSize + '/scripts/gsap_extras')
+            );
         },
 
         styles: function () {
