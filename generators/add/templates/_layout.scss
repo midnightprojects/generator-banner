@@ -10,10 +10,6 @@ body {
     overflow: hidden;
     width: $banner-width;
     height: $banner-height;
-    left: 50%;
-    top: 50%;
-    margin-left: -$banner-width / 2;
-    margin-top: -$banner-height / 2;
     opacity: 0;
 
     #button-exit {

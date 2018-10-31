@@ -8,7 +8,11 @@ var app = app || {};
 
 	function handleReady(e) {
 		console.log("READY: " + e);
-		app.Animation.start();
+		// app.Animation.start();
 	}
+
+	window.addEventListener("load", function() {
+		app.Animation.start();
+	});
 
 })();
