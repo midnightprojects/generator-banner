@@ -12,11 +12,11 @@
     <% if (bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script><% } %><% if (bannerType === 'Sizmek') { %><script src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script><% } %><% if (bannerType === 'DCM') { %><script>var clickTag=""</script><% } %>
 </head>
 <body>
-    <div id="banner">
+    <div id="banner" class="default">
         <h1 id="title">Freakin Banners!</h1>
         <p id="caption">Get some</p>
-        <div id="border"></div>
-        <div id="button-exit"></div>
+        <div id="border" class="default"></div>
+        <div id="button-exit" class="default"></div>
     </div>
 
     <% if (includeZepto == true) { %><script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script><% } %>

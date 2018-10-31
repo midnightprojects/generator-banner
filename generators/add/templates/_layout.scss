@@ -4,9 +4,14 @@ body {
     color: #555;
 }
 
+.default {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 #banner {
-    background: #111;
-    position: absolute;
+	background: #111;
     overflow: hidden;
     width: $banner-width;
     height: $banner-height;
@@ -16,22 +21,17 @@ body {
         background-color: rgba(255, 255, 255, 0);
         cursor: pointer;
         height: 100%;
-        left: 0px;
-        position: absolute;
-        top: 0px;
         width: 100%;
     }
 
     #border {
-        border: 1px solid #ccc;
-        display: block;
-        width: $banner-width - 2;
-        height: $banner-height - 2;
-        left: 0;
-        top: 0;
+		display: block;
+		width: $banner-width;
+		height: $banner-height;
         pointer-events: none;
-        position: absolute;
-        z-index: 999;
+		outline: solid 1px #ccc;
+  		outline-offset: -1px;
+		z-index: 999;
     }
 
     #title {
